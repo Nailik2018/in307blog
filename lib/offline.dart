@@ -1,23 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:in307blog/presentation/screens/overview.dart';
-
-// void main() {
-//   runApp(BlogApp());
-// }
-//
-// class BlogApp extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       title: 'Blog-App',
-//       theme: ThemeData(
-//         primarySwatch: Colors.blue,
-//       ),
-//       home: BlogListPage(),
-//     );
-//   }
-// }
-
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 
@@ -76,18 +57,6 @@ class BlogService {
       }),
     );
   }
-
-  // Future<void> updateBlog(int id, Blog blog) async {
-  //   await http.put(
-  //     Uri.parse('$baseUrl/$id'),
-  //     headers: {'Content-Type': 'application/json'},
-  //     body: jsonEncode({
-  //       'title': blog.title,
-  //       'description': blog.description,
-  //       'image': blog.image,
-  //     }),
-  //   );
-  // }
 
   Future<void> updateBlog(int id, Blog blog) async {
     try {
